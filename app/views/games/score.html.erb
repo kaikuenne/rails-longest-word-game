@@ -1,0 +1,48 @@
+<h1>Score</h1>
+
+<div class="wrapper">
+
+  <div class="container">
+      <h2>Letters given to you:</h2>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <% @letters.each do |letter| %>
+      <p class="letters"><%= letter %></p>
+    <% end %>
+  </div>
+
+  <br>
+
+  <div class="container">
+      <h2>Your word:</h2>
+  </div>
+
+  <div class="container">
+    <% @user_word_a.each do |letter| %>
+      <p class="letters"><%= letter %></p>
+    <% end %>
+  </div>
+
+  <div class="container">
+    <h2><%= "#{@answer[:comment]}" %></h2>
+  </div>
+
+  <div class="container">
+    <h2><%= "Your score is #{@answer[:score]}" %></h2>
+  </div>
+
+  <div class="container">
+    <h2><%= "Your grand score is #{@answer[:grand]}" %></h2>
+  </div>
+
+  <div class="container">
+    <%= link_to "Play again", new_path %>
+  </div>
+
+</div>
+
+
+
